@@ -1,0 +1,104 @@
+library ieee ;
+use ieee.std_logic_1164.all;
+
+entity CPU is
+port (  A : in std_logic_vector (15 downto 0);
+        B : in std_logic_vector (15 downto 0);
+        ALU_out : out std_logic_vector(31 downto 0);
+	Overflow, EQ, GT, ZA, ZB : in std_logic;
+	enable : in std_logic;
+	loadIR : out std_logic;
+	opcode2 : in std_logic_vector (2 downto 0);
+	Mode1   : in std_logic_vector (1 downto 0)); 
+      
+     
+end CPU;
+
+architecture CPU of CPU is
+
+----------------ALU-------------------------
+component ALU
+port (A : in std_logic_vector (15 downto 0);
+      B : in std_logic_vector (15 downto 0);
+      opcode1: in std_logic_vector (2 downto 0);
+      Mode   : in std_logic_vector (1 downto 0);
+      output : out std_logic_vector(31 downto 0);
+      Overflow, EQ, GT, ZA, ZB : out std_logic);
+end component;
+
+--------------MEMORY---------------------------
+
+component memory
+port ( clock   : in  std_logic;
+         we      : in  std_logic;
+         address : in  std_logic_vector (2 downto 0);
+         datain  : in  std_logic_vector (15 downto 0);
+         dataout : out std_logic_vector (15 downto 0));
+end component;
+
+----------------MUX----------------------------------
+
+component Mux
+Port (  ALUout :  IN std_logic_vector(31 downto 0);
+	IRout: IN std_logic_vector(15 downto 0);
+	Sel2: IN std_logic; -- select line for the multiplexer.
+	MuxOut: OUT std_logic_vector (15 downto 0)); -- output the selected input (A for Sel=0) 
+end component;
+
+-----------------PROGRAM COUNTER-----------------------
+
+
+component PC
+PORT (clk, en,loadPC,IncPC, reset: IN std_logic;
+	      IRout: IN std_logic_vector(15 downto 0);--INPUT
+	      PCout: OUT std_logic_vector(15 downto 0)); --output
+end component;
+
+-------------------IR-----------------------------------
+
+component IR
+port(clk,ldir,enableAB, enableDB,reset: IN std_logic;
+	     abus: OUT std_logic_vector(15 downto 0);
+	     dbus: INOUT std_logic_vector(15 downto 0);
+	     load,store,add,halt,jump:OUT std_logic;
+	     Cjump,Iload,Istore,Dload,Dadd:OUT std_logic);
+end component;
+
+--------------------IM-----------------------------------
+
+component instructionmemory 
+	port(we_IM, reset, valu: IN std_logic;
+	     abus: IN std_logic_vector(15 downto 0);--input pins
+	     dbus: INOUT std_logic_vector(15 downto 0));--output pins
+end component;
+
+---------------------CONTROLLER---------------------------
+
+component controller is
+
+port ( EQ,ZA, GT, ZB, Overflow, en, clb: IN std_logic;
+       opcode1: in std_logic_vector (2 downto 0);
+       ALU_opcode:out std_logic_vector (2 downto 0);
+       Mode   : in std_logic_vector (1 downto 0); 
+       loadIR, weDM , loadPC, incPC , sel1, sel2 : out std_logic;
+       ALUmode : out std_logic_vector(1 downto 0); 
+       loadA, loadB, loadC : inout std_logic);
+
+end component;
+------------------------------------------------------------------------------------
+signal datain, dataout, Muxout, IRout, PCout, abus: std_logic_vector (15 downto 0);
+signal address, Opcode1: std_logic_vector (2 downto 0);
+signal Mode : std_logic_vector (1 downto 0);
+signal alu_cin ,we_IM,valu, DMwe, clk, sel2, en ,Overflow1, EQ1, GT1, ZA1, ZB1 ,loadA, loadB, loadC, clb, sel1, ldIR, loadPC , IncPC, enableAB, enableDB, reset, load, store, add, halt, jump, Cjump,Iload,Istore,Dload,Dadd: std_logic;
+signal ALUout : std_logic_vector (31 downto 0);
+
+begin
+
+	ALU1 : ALU port map (  A => A,  B => B, opcode1=> opcode1, Mode => Mode, output => ALUout, Overflow => Overflow1, EQ => EQ1, GT => GT1, ZA => ZA1, ZB =>ZB1 );
+	Memory1 : memory port map (clock => clk , we => DMwe, address => address, datain => datain, dataout => dataout); 
+	MUX1 : MUX port map (ALUout => ALUout, IRout => IRout, sel2 =>sel2, Muxout => Muxout);
+	PC1  : PC port map (clk => clk, en => en, loadPC => loadPC , IncPC => IncPC, reset => reset, IRout => IRout, PCout => PCout  );	
+	IR1 : IR port map (clk => clk, ldIR => ldIR, enableAB => enableAB, enableDB => enableDB, reset => reset, abus => abus, dbus => IRout, load => load, store => store, add => add, halt => halt, jump => jump, Cjump => Cjump, Iload => Iload, Istore => Istore, Dload => Dload, Dadd => Dadd);
+	IMem : instructionmemory port map (we_IM, reset, valu, abus, IRout);
+	Con : controller port map ( EQ, ZA, GT, ZB, Overflow, enable , clb, opcode2, opcode1, Mode1, loadIR, DMwe, loadPC, IncPC, sel1, sel2, Mode, loadA, loadB, loadC);
+end CPU;

@@ -1,0 +1,187 @@
+C:/Users/DELL/OneDrive/DMD/Project6/instruction_mem.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/OneDrive/DMD/Project6/instruction_mem.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity instructionmemory
+-- Compiling architecture behavioral of instructionmemory
+
+} {} {}} C:/Users/DELL/OneDrive/DMD/Project6/controller_vhdl.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/OneDrive/DMD/Project6/controller_vhdl.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity controller
+-- Compiling architecture controller of controller
+
+} {} {}} C:/Users/DELL/Desktop/Soc/socproject1/CODES/ALU.v {0 {vlog -work work -stats=none C:/Users/DELL/Desktop/Soc/socproject1/CODES/ALU.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ALU
+** Error: (vlog-13069) C:/Users/DELL/Desktop/Soc/socproject1/CODES/ALU.v(18): near "'": syntax error, unexpected '\'', expecting ';'.
+
+** Error: (vlog-13069) C:/Users/DELL/Desktop/Soc/socproject1/CODES/ALU.v(19): near "'": syntax error, unexpected '\'', expecting ';'.
+
+** Error: (vlog-13069) C:/Users/DELL/Desktop/Soc/socproject1/CODES/ALU.v(22): near "if": syntax error, unexpected if, expecting '('.
+
+
+} {4.0 5.0 6.0 7.0 8.0 9.0} {}} C:/Users/DELL/OneDrive/DMD/Project6/MUX.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/OneDrive/DMD/Project6/MUX.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Mux
+-- Compiling architecture behavior of Mux
+
+} {} {}} {C:/Users/DELL/OneDrive/DMD/New folder/Project5/memory_try.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/DELL/OneDrive/DMD/New folder/Project5/memory_try.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity single_port_RAM
+-- Compiling architecture arch of single_port_RAM
+
+} {} {}} C:/Users/DELL/OneDrive/DMD/Project6/IR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/OneDrive/DMD/Project6/IR.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity IR
+-- Compiling architecture behavior of IR
+
+} {} {}} C:/Users/DELL/Desktop/Soc/socproject1/CODES/test_up.v {1 {vlog -work work -stats=none C:/Users/DELL/Desktop/Soc/socproject1/CODES/test_up.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module test_up
+
+Top level modules:
+	test_up
+
+} {} {}} C:/Users/DELL/Desktop/Soc/socproject1/CODES/register_file.v {1 {vlog -work work -stats=none C:/Users/DELL/Desktop/Soc/socproject1/CODES/register_file.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module reg_file
+
+Top level modules:
+	reg_file
+
+} {} {}} C:/Users/DELL/Desktop/Soc/socproject1/CODES/accumalator.v {1 {vlog -work work -stats=none C:/Users/DELL/Desktop/Soc/socproject1/CODES/accumalator.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module accumulator
+
+Top level modules:
+	accumulator
+
+} {} {}} C:/Users/DELL/OneDrive/DMD/Project6/PC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/OneDrive/DMD/Project6/PC.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity PC
+-- Compiling architecture behaviour of PC
+
+} {} {}} C:/Users/DELL/Desktop/Soc/socproject1/CODES/controller1.v {1 {vlog -work work -stats=none C:/Users/DELL/Desktop/Soc/socproject1/CODES/controller1.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ControllerFSM
+
+Top level modules:
+	ControllerFSM
+
+} {} {}} {C:/Users/DELL/OneDrive/DMD/New folder/Project5/AlU.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/DELL/OneDrive/DMD/New folder/Project5/AlU.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity and2
+-- Compiling architecture behavior of and2
+-- Compiling entity or2
+-- Compiling architecture behavior of or2
+-- Compiling entity nand2
+-- Compiling architecture behavior of nand2
+-- Compiling entity nor2
+-- Compiling architecture behavior of nor2
+-- Compiling entity not2
+-- Compiling architecture behavior of not2
+-- Compiling entity xor2
+-- Compiling architecture behavior of xor2
+-- Compiling entity xnor2
+-- Compiling architecture behavior of xnor2
+-- Loading package NUMERIC_STD
+-- Compiling entity mul
+-- Compiling architecture behavior of mul
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity FullAdder16Bit
+-- Compiling architecture behavior of FullAdder16Bit
+-- Compiling entity ALU
+-- Compiling architecture ALU of ALU
+
+} {} {}} C:/Users/DELL/Desktop/Soc/socproject1/CODES/processor.v {1 {vlog -work work -stats=none C:/Users/DELL/Desktop/Soc/socproject1/CODES/processor.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top_level
+
+Top level modules:
+	top_level
+
+} {} {}} C:/Users/DELL/OneDrive/DMD/Project6/alunew.v {1 {vlog -work work -stats=none C:/Users/DELL/OneDrive/DMD/Project6/alunew.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/Users/DELL/OneDrive/DMD/Project6/CPU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/DELL/OneDrive/DMD/Project6/CPU.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CPU
+-- Compiling architecture CPU of CPU
+
+} {} {}} C:/Users/DELL/Desktop/Soc/socproject1/CODES/IR.v {1 {vlog -work work -stats=none C:/Users/DELL/Desktop/Soc/socproject1/CODES/IR.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IR
+
+Top level modules:
+	IR
+
+} {} {}} {C:/Users/DELL/OneDrive/DMD/New folder/Project5/memory_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/DELL/OneDrive/DMD/New folder/Project5/memory_tb.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity memory_tb
+-- Compiling architecture mem of memory_tb
+
+} {} {}} {C:/Users/DELL/OneDrive/DMD/New folder/Project5/ALU_tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/DELL/OneDrive/DMD/New folder/Project5/ALU_tb.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU_tb
+-- Compiling architecture behavior of ALU_tb
+
+} {} {}} {C:/Users/DELL/OneDrive/DMD/New folder/Project5/memory.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/DELL/OneDrive/DMD/New folder/Project5/memory.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture mem of memory
+
+} {} {}} C:/Users/DELL/Desktop/Soc/socproject1/CODES/program_counter.v {1 {vlog -work work -stats=none C:/Users/DELL/Desktop/Soc/socproject1/CODES/program_counter.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module program_counter
+
+Top level modules:
+	program_counter
+
+} {} {}}
